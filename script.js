@@ -113,9 +113,7 @@ function updateThemeToggle(theme, isUsingSystemTheme = false) {
     themeToggle.setAttribute('aria-pressed', String(isLight));
     themeToggle.setAttribute(
         'aria-label',
-        isUsingSystemTheme
-            ? `Using browser ${theme} theme. Click to switch manually.`
-            : `Using manual ${theme} theme. Click to switch theme.`
+        `Using ${theme} theme. Click to switch theme.`
     );
 
     if (icon) {
@@ -124,7 +122,7 @@ function updateThemeToggle(theme, isUsingSystemTheme = false) {
     }
 
     if (label) {
-        label.textContent = isUsingSystemTheme ? `${isLight ? 'Light' : 'Dark'} (Auto)` : (isLight ? 'Light' : 'Dark');
+        label.textContent = isLight ? 'Light' : 'Dark';
     }
 }
 
