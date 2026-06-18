@@ -1654,6 +1654,14 @@ section {
         padding: 60px 0;
     }
     
+    body[data-theme="light"] .glass-card {
+        box-shadow: 0 2px 8px rgba(0, 91, 65, 0.06);
+    }
+    
+    body[data-theme="light"] .glass-card:hover {
+        box-shadow: 0 4px 12px rgba(0, 91, 65, 0.1);
+    }
+    
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 1.25rem;
