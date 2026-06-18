@@ -1442,8 +1442,29 @@ section {
 
 .contact-method {
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 1rem;
+    padding: 1.25rem;
+    background: var(--chip-bg);
+    border: 1px solid var(--chip-border);
+    border-radius: 12px;
+    transition: all var(--transition-normal);
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-method:hover {
+    background: var(--chip-bg-hover);
+    transform: translateX(5px);
+    border-color: var(--primary-color);
+}
+
+.contact-method.non-clickable {
+    cursor: default;
+}
+
+.contact-method.non-clickable:hover {
+    transform: none;
 }
 
 .method-icon {
@@ -1454,25 +1475,31 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #F5E8D8;
+    color: #FFFFFF;
     font-size: 1.25rem;
     flex-shrink: 0;
+    transition: all var(--transition-normal);
+}
+
+.contact-method:hover .method-icon {
+    transform: scale(1.1);
+}
+
+.method-info {
+    flex: 1;
 }
 
 .method-info h4 {
     margin-bottom: 0.25rem;
     font-size: 1rem;
+    color: var(--text-primary);
 }
 
-.method-info a,
-.method-info p {
+.method-info span {
     color: var(--text-secondary);
     font-size: 0.9rem;
     opacity: 0.9;
-}
-
-.method-info a:hover {
-    color: var(--primary-color);
+    display: block;
 }
 
 .availability {
@@ -1860,13 +1887,24 @@ section {
     }
     
     .contact-method {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 1rem;
     }
     
     .method-icon {
         width: 45px;
         height: 45px;
+        font-size: 1.1rem;
+    }
+    
+    .method-info h4 {
+        font-size: 0.95rem;
+    }
+    
+    .method-info span {
+        font-size: 0.85rem;
     }
 }
 
