@@ -1416,21 +1416,26 @@ section {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr;
     gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .contact-info .glass-card {
-    position: sticky;
-    top: 100px;
+    width: 100%;
 }
 
 .contact-info h3 {
     margin-bottom: 1rem;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .contact-info p {
     margin-bottom: 2rem;
+    line-height: 1.6;
+    word-wrap: break-word;
 }
 
 .contact-methods {
@@ -1648,6 +1653,16 @@ section {
     
     .contact-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.25rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.95rem;
+        line-height: 1.7;
     }
     
     .timeline::before {
@@ -1812,6 +1827,15 @@ section {
     
     section {
         padding: 50px 0;
+    }
+    
+    .contact-info h3 {
+        font-size: 1.15rem;
+    }
+    
+    .contact-info p {
+        font-size: 0.9rem;
+        line-height: 1.65;
     }
     
     .hero-title {
